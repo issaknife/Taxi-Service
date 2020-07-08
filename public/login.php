@@ -3,6 +3,7 @@
 use App\Users\Model;
 use App\Views\Forms\Auth\Login;
 use App\Views\Navigation;
+use Core\Views\Header;
 
 require_once '../bootloader.php';
 
@@ -30,16 +31,13 @@ function form_fail(&$form, $input)
 $form = new Login();
 $form->validate();
 $nav = new Navigation;
+$header = new Header();
+
 ?>
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Taxi Service</title>
-	<link rel="stylesheet" href="assets/css/normalize.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<?php print $header->render(); ?>
 </head>
 
 <body>
@@ -49,8 +47,8 @@ $nav = new Navigation;
 		<?php print $form->render(); ?>
 	</main>
 	<footer>
-        © 2020. Matas Bžeskis, all rights reserved.
-    </footer>
+		© 2020. Matas Bžeskis, all rights reserved.
+	</footer>
 </body>
 
 </html>
