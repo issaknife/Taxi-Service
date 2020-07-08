@@ -94,7 +94,7 @@ footer {
 .comment_form {
 	margin: 1rem auto;
 	max-width: 740px;
-	width: 80%
+	width: 80%;
 }
 
 .comment_form button {
@@ -206,13 +206,13 @@ form {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
 	.hero {
 		height: 150px;
 	}
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.services {
 		flex-direction: column;
 		height: auto;
