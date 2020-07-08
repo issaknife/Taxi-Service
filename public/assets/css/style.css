@@ -1,0 +1,237 @@
+html {
+	position: relative;
+	padding-bottom: 70px;
+	font-family: 'Roboto', sans-serif;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 800px;
+}
+
+header {
+	background-color: rgb(0, 0, 0);
+	box-shadow: 0px 0px 20px 0px black;
+	height: 70px;
+	display: flex;
+	align-items: center;
+}
+
+.hero {
+	height: 300px;
+	background-image: url('../images/hero-img.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.services {
+	max-width: 800px;
+	height: 400px;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.services__card {
+	border: 1px solid rgb(168, 168, 168);
+	width: 25%;
+	text-align: center;
+	min-height: 100%;
+}
+
+.services__img {
+	height: 40%;
+}
+
+.services__img img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.services__description {
+	margin: 0 5px;
+}
+
+.services__name {
+	margin: 10px 5px;
+	font-size: 1.6rem;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70px;
+	width: 100%;
+	background-color: rgb(0, 0, 0);
+	color: white;
+	position: absolute;
+	bottom: 0;
+}
+
+.comment_form textarea {
+	width: 100%;
+	height: 150px;
+	resize: none;
+	margin: 1rem auto;
+}
+
+.comment_form {
+	margin: 1rem auto;
+	max-width: 740px;
+	width: 80%
+}
+
+.comment_form button {
+	margin: 2rem auto 1rem;
+}
+
+.add-comment-block {
+	text-align: center;
+	margin: 2rem auto;
+}
+
+.comments-block {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.comment_table {
+	width: 100%;
+}
+
+.comment_table td {
+	overflow: hidden;
+	word-wrap: break-word;
+	max-width: 300px;
+}
+
+.comment_table thead {
+	font-weight: 700;
+}
+
+nav ul {
+	display: grid;
+	padding: 0;
+	grid-auto-flow: column;
+	grid-gap: 30px;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+.message {
+	display: inline-block;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
+}
+
+form {
+	width: 30%;
+	padding: 2rem;
+	background-color: rgb(219, 219, 219);
+	text-align: center;
+}
+
+form input,
+form button {
+	margin-bottom: 0.2rem;
+	background-color: white;
+	display: block;
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #fafafa;
+}
+
+form button {
+	margin: 3rem auto 1rem;
+}
+
+form label {
+	display: inline-block;
+	margin: 1rem 0 0.3rem;
+}
+
+table,
+tr,
+td,
+th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 1em;
+}
+
+table {
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	margin: 2rem auto;
+}
+
+.active a {
+	text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 400px) {
+	.hero {
+		height: 150px;
+	}
+}
+
+@media (max-width: 768px) {
+	.services {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.services__card {
+		width: 90%;
+		margin: 10px auto;
+	}
+
+	.services__img {
+		height: 120px;
+	}
+
+	.comment_table td {
+		max-width: 100px;
+	}
+
+	form {
+		width: 80%;
+	}
+}
