@@ -9,7 +9,9 @@ $comments = Model::getWhere([]);
 
 foreach ($comments ?? [] as $comment_key => &$comment) {
     $user = UsersModel::find($comment->uid);
-    $comment->name = $user->name;
+    if ($user) {
+        $comment->name = $user->name;
+    }
 }
 
 print(json_encode($comments));
